@@ -6,9 +6,10 @@ import './App.css';
 class App extends Component {
   constructor() {
     super();
+
     this.state = {
-      name: 'Labanino',
-    }
+      name: 'Alex',
+    };
   }
 
   render() {
@@ -17,7 +18,13 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>Hi {this.state.name}!</p>
-          <button>Change Name</button>
+          <button 
+            onclick={() => {
+              this.setState({ name: 'Andrei' });
+            }}
+          >
+            Change Name
+          </button>
         </header>
       </div>
     );
